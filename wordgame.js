@@ -1,6 +1,6 @@
 
 
-function pauseClick(){
+function beginClick(){
     new basicTimer(function(val) {
         var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
         document.getElementById("timer").textContent = timerMsg; 
