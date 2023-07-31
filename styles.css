@@ -1,0 +1,9 @@
+.time {
+    background-color: green; 
+    height: 50px;
+    width: 100px;
+   }
+
+#pause{
+    cursor: pointer;
+}

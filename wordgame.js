@@ -1,3 +1,13 @@
+
+
+function pauseClick(){
+    new basicTimer(function(val) {
+        var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
+        document.getElementById("timer").textContent = timerMsg; 
+    });
+}
+
+
 function basicTimer(callback, val) {
     val = val || 60; 
     var timer=setInterval(function() { 
@@ -7,7 +17,8 @@ function basicTimer(callback, val) {
         } 
     }, 1000);
 }
-new basicTimer(function(val) {
-    var timerMsg = "00:" + (val >= 10 ? val : "0" + val);
-    document.getElementById("timer").textContent = timerMsg; 
-});
+
+// Places Timer in the "id" portion of the html 
+
+
+
