@@ -1,8 +1,41 @@
+h1{
+    text-align: center;
+}
+
 .time {
-    background-color: green; 
+    background-color: rgb(10, 141, 10); 
     height: 50px;
     width: 100px;
-   }
+}
+
+.score{
+    background-color: rgb(128, 0, 0); 
+    height: 50px;
+    width: 100px;
+}
+.words{
+    background-color: rgb(128, 125, 125); 
+    float:right;
+    height: 500px;
+    width: 400px;
+}
+
+.container{
+    background-color: rgba(23, 0, 128, 0.349); 
+    margin:auto;
+    height: 800px;
+    width: 600px;
+
+}   
+
+.keyboard{
+    background-color: rgb(80, 80, 80); 
+    position:relative;
+    bottom:0px;
+    float:center;
+    height: 100px;
+    width: 300px;
+}
 
 #pause{
     cursor: pointer;
