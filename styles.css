@@ -4,20 +4,23 @@ h1{
 
 .time {
     background-color: rgb(10, 141, 10); 
+    display: flex;
     height: 50px;
     width: 100px;
 }
 
 .score{
     background-color: rgb(128, 0, 0); 
+    display: flex;
     height: 50px;
     width: 100px;
 }
 .words{
     background-color: rgb(128, 125, 125); 
-    float:right;
+    display: flex;
+    float: right;
     height: 500px;
-    width: 400px;
+    width: 300px;
 }
 
 .container{
@@ -30,11 +33,21 @@ h1{
 
 .keyboard{
     background-color: rgb(80, 80, 80); 
-    position:relative;
-    bottom:0px;
-    float:center;
-    height: 100px;
-    width: 300px;
+    display: flex;
+    bottom: 0px;
+    height: 200px;
+    width: 500px;
+}
+
+.spacer{
+    height: 150px;
+}
+
+.scoreIncrease{
+    background-color: rgb(128, 0, 0); 
+    display: flex;
+    height: 50px;
+    width: 100px; 
 }
 
 #pause{
