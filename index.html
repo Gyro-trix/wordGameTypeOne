@@ -5,14 +5,18 @@
 <html>
     <body>
         <div class = "container">
-            <h1>Word Game</h1><div class ="words" >Words</div>
+            <h1>Word Game</h1>
+            <div class ="words" >Words</div>
+            
             Score:
             <div class ="score" id = "score"></div>
             
             Timer:
             <div class ="time" id = "timer"></div>
-            <img src="images/play-button-4211.png" id="pause" onclick="timer();">
-            <img src="images/play-button-4211.png" id="pause" onclick="scoreUp();">
+            <button onclick="timer();">Start</button>
+            <br>
+            <button onclick="scoreUp();">Score and Time plus Ten</button>
+            
             <div class = "spacer"></div>
             <div class = "keyboard">Keyboard</div> 
         </div>
