@@ -15,9 +15,13 @@ function beginClick(){
             timerMsg = "00:" + (val >= 10 ? val : "0" + val);
             document.getElementById("timer").textContent = timerMsg; 
         });
-        gameState = 1; 
+        gameState = 1;
+    } else if(gameState == 1){
+            clearInterval(timer);
+            gameState = 0;
+        } 
     }
-}
+
 
 function scoreUp(){
     score = score + 10;
