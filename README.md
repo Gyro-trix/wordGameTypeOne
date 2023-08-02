@@ -19,7 +19,7 @@ A next level button that only becomes usable after meating a certain criteria.
 
 A virtual keyboard (containing just letters) at the bottom of the screen to type out words with the mouse
 
-(https://github.com/Gyro-trix/wordGameTypeOne/blob/main/wordGameDiagramDraft.jpg)
+![](https://github.com/Gyro-trix/wordGameTypeOne/blob/main/wordGameDiagramDraft.jpg)
 
 ## My Goals
 
