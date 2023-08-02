@@ -23,12 +23,17 @@ function timer(){
 }
 
 function scoreUp(){
+    if (mode == 1){
     score = score + 10;
     sec = sec + 10;
     document.getElementById("score").innerHTML = "";
     document.getElementById("score").textContent = score;
+    }
 }
 
+function restart(){
+    location.reload();
+}
 
 
 
