@@ -33,7 +33,18 @@ body{
 .hb{
     display: flex;
     float: right;
+    justify-content: center;
+    align-items: center;
 }
+.scoreup, .play{
+    background-color: rgb(209, 100, 100);
+    width: 50px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .time {
     background-color: rgb(10, 141, 10); 
