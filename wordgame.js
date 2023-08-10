@@ -4,6 +4,9 @@ let sec = 60;
 let mode = 0;
 let popup = true;
 let time;
+let sym;
+let level = 1;
+let wordLength = 0;
 
 function timer(){
     if (mode == 0){
@@ -57,3 +60,27 @@ function infoPopUp(){
     }
 }
 
+function letterCreate(sym){
+if (wordLength < 2 ){
+    document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
+    wordLength++;
+} else if(wordLength == 2){
+    document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
+    document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
+    document.getElementById("currentWord").innerHTML = "";
+    wordLength = 0;
+}
+    
+    /*
+    let div = document.createElement("div");
+    div.id = "letter";
+    div.className = "letter";
+    div.style.width = "70px";
+    div.style.height = "70px";
+    div.style.background = "grey";
+    div.style.color = "white";
+    div.innerHTML = sym;
+    
+document.getElementById("words").appendChild(div);
+*/
+}

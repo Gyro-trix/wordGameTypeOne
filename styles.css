@@ -10,6 +10,7 @@ h1{
 
 body{
     background-color: rgb(26, 26, 26);
+    color: whitesmoke;
     font-family: sans-serif;
 }
 .hb{
@@ -45,6 +46,9 @@ body{
     float: right;
     height: 500px;
     width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 .container{
     background-color: rgba(23, 0, 128, 0.349); 
@@ -71,7 +75,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*
+
 
 .keycon{
     background-color: rgb(80, 80, 80); 
@@ -83,6 +87,12 @@ body{
     height: 200px;
     width: 600px;
 } 
+.currentWord, .prevWord{
+    font-size: 40px;
+    padding-left:10px;
+
+}
+/*
 #ip{
     background-color: rgb(26, 26, 26);
     width: 500px;
@@ -99,20 +109,6 @@ body{
     font-size: 18px;
     text-transform: capitalize;
 }
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
 
 .keybd{
     box-shadow: -3px -3px 5px rgb(63, 63, 63) , 3px 3px 5px black;
@@ -137,10 +133,10 @@ button{
     width: 25px;
     height: 25px;
     font-weight: bold;
-    margin: 0 4px;
+    margin: 4px 4px;
     border: none;
     background-color: transparent;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
     border-radius: 5px;
     cursor: pointer;
