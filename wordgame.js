@@ -5,6 +5,8 @@ var time;
 
 document.getElementById("score").textContent = score;
 
+
+
 function timer(){
     if (mode == 0){
         time = setInterval(function(){
