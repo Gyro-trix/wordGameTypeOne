@@ -63,19 +63,19 @@ body{
     width: 600px;
 
 }   
-
+/*
 .keycon{
     background-color: rgb(80, 80, 80); 
     position:relative;
     left: 50px;
     top: 150px;
     height: 200px;
-    width: 500px;
-}
-
+    width: 600px;
+} 
+*/
 .keybord{
     box-shadow: -3px -3px 5px rgb(63, 63, 63) , 3px 3px 5px black;
-    width: 680px;
+    width: 500px;
     margin:200px auto 50px;
     display: flex;
     flex-direction: column;
@@ -84,8 +84,11 @@ body{
     border-radius: 10px;
 }
 .row{
-    margin:5px ;
+    margin:10px ;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button{
     width: 25px;
@@ -93,16 +96,46 @@ button{
     font-weight: bold;
     margin: 0 4px;
     border: none;
-    background-color: transparent;
-    color:white;
+    /*background-color: transparent;*/
+    color:rgb(95, 95, 95);
     box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.row4 , .backspace , .space{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.keybord .backspace , .space{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    /* user-select: none; */
+}
+.backspace , .space{
+    border-radius: 5px;
+    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+}
+.keybord .space{
+    width: 300px;
+    height: 50px;
+}
+.keybord .backspace {
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+}
+.keybord .active{
+    box-shadow:inset -2px -2px 4px rgb(63, 63, 63) ,
+inset 2px 2px 4px black;
+    color: yellow;
+}
+
 
 .spacer{
-    height: 150px;
+    height: 300px;
 }
 
 .scoreIncrease{
