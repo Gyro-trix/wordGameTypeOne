@@ -2,6 +2,7 @@
 let score = 0;
 let sec = 60;
 let mode = 0;
+let popup = true;
 let time;
 
 function timer(){
@@ -44,6 +45,15 @@ function playPause(){
     if (mode == 1){
         const button = document.getElementById("play").innerHTML = "Play";
     }
-    }
+}
 
+function infoPopUp(){
+    if(popup === true){
+        document.getElementById("info").style.visibility='hidden';
+        popup = false;
+    } else if (popup === false){
+        document.getElementById("info").style.visibility='visible';
+        popup = true;
+    }
+}
 
