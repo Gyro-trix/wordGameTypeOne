@@ -1,8 +1,8 @@
 
-var score = 0;
-var sec = 60;
-var mode = 0;
-var time;
+let score = 0;
+let sec = 60;
+let mode = 0;
+let time;
 
 function timer(){
     if (mode == 0){
