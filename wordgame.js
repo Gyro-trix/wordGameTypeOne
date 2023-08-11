@@ -68,13 +68,18 @@ function letterCreate(sym){
     if (wordLength < 2 && mode === 1){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
         wordLength++;
+        btn = document.getElementById(String(sym));
+        btn.setAttribute("disabled","");
         
     } else if(wordLength === 2 && mode === 1){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
         document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
         document.getElementById("currentWord").innerHTML = "";
         wordLength = 0;
+        btn = document.getElementById(String(sym));
+        btn.setAttribute("disabled","");
     }
+  
 }
     /*
     let div = document.createElement("div");

@@ -75,8 +75,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
 .keycon{
     background-color: rgb(80, 80, 80); 
     display: flex;
@@ -99,6 +97,18 @@ button{
     margin: 4px 4px;
     border: none;
     background-color: transparent;
+    color:rgb(255, 255, 255);
+    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:disabled{
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    margin: 4px 4px;
+    border: none;
+    background-color:rgba(44, 44, 44, 0.664);
     color:rgb(255, 255, 255);
     box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
     border-radius: 5px;

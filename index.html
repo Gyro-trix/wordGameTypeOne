@@ -9,7 +9,8 @@
 <html>
     <body>
         <div class = "info" id = "info">
-            <button class = "begin" id = "begin" onclick="infoPopUp();">Begin</button>
+            <P>Gameplay Information .....</P>
+            <button class = "begin" id = "begin" onclick="infoPopUp(),timer();">Begin</button>
         </div>
         <div class = "container">
             
@@ -21,12 +22,8 @@
             
             <br>
             <div class ="words" id = "words">
-                <div class ="prevWord" id = "prevWord">
-
-                </div>
-                <div class ="currentWord" id = "currentWord">
-
-                </div>
+                <div class ="prevWord" id = "prevWord"></div>
+                <div class ="currentWord" id = "currentWord"></div>
             
             </div>
 
@@ -46,44 +43,44 @@
             <div class="keycon">
                 <br>
                 
-                <div class=”keybd”>
+                <div class="keybd">
                    
-                    <div class=”row row1″>
-                        <button id=”Q” onclick="letterCreate('Q')">Q</button>
-                        <button id=”W” onclick="letterCreate('W')">W</button>
-                        <button id=”E” onclick="letterCreate('E')">E</button>
-                        <button id=”R” onclick="letterCreate('R')">R</button>
-                        <button id=”T” onclick="letterCreate('T')">T</button>
-                        <button id=”Y” onclick="letterCreate('Y')">Y</button>
-                        <button id=”U” onclick="letterCreate('U')">U</button>
-                        <button id=”I” onclick="letterCreate('I')">I</button>
-                        <button id=”O” onclick="letterCreate('O')">O</button>
-                        <button id=”P” onclick="letterCreate('P')">P</button>
+                    <div class="row row1">
+                        <button id="Q" onclick="letterCreate('Q')">Q</button>
+                        <button id="W" onclick="letterCreate('W')">W</button>
+                        <button id="E" onclick="letterCreate('E')">E</button>
+                        <button id="R" onclick="letterCreate('R')">R</button>
+                        <button id="T" onclick="letterCreate('T')">T</button>
+                        <button id="Y" onclick="letterCreate('Y')">Y</button>
+                        <button id="U" onclick="letterCreate('U')">U</button>
+                        <button id="I" onclick="letterCreate('I')">I</button>
+                        <button id="O" onclick="letterCreate('O')">O</button>
+                        <button id="P" onclick="letterCreate('P')">P</button>
                     </div>
                     <br>
-                    <div class=”row row2″>
-                        <button id=”A” onclick="letterCreate('A')">A</button>
-                        <button id=”S” onclick="letterCreate('S')">S</button>
-                        <button id=”D” onclick="letterCreate('D')">D</button>
-                        <button id=”F” onclick="letterCreate('F')">F</button>
-                        <button id=”G” onclick="letterCreate('G')">G</button>
-                        <button id=”H” onclick="letterCreate('H')">H</button>
-                        <button id=”J” onclick="letterCreate('J')">J</button>
-                        <button id=”K” onclick="letterCreate('K')">K</button>
-                        <button id=”L” onclick="letterCreate('L')">L</button>
+                    <div class="row row2">
+                        <button id="A" onclick="letterCreate('A')">A</button>
+                        <button id="S" onclick="letterCreate('S')">S</button>
+                        <button id="D" onclick="letterCreate('D')">D</button>
+                        <button id="F" onclick="letterCreate('F')">F</button>
+                        <button id="G" onclick="letterCreate('G')">G</button>
+                        <button id="H" onclick="letterCreate('H')">H</button>
+                        <button id="J" onclick="letterCreate('J')">J</button>
+                        <button id="K" onclick="letterCreate('K')">K</button>
+                        <button id="L" onclick="letterCreate('L')">L</button>
                     </div>
                     <br>
-                    <div class=”row row3″>
-                            <button id=”Z” onclick="letterCreate('Z')">Z</button>
-                            <button id=”X” onclick="letterCreate('X')">X</button>
-                            <button id=”C” onclick="letterCreate('C')">C</button>
-                            <button id=”V” onclick="letterCreate('V')">V</button>
-                            <button id=”B” onclick="letterCreate('B')">B</button>
-                            <button id=”N” onclick="letterCreate('N')">N</button>
-                            <button id=”M” onclick="letterCreate('N')">M</button>
+                    <div class="row row3">
+                            <button id="Z" onclick="letterCreate('Z')">Z</button>
+                            <button id="X" onclick="letterCreate('X')">X</button>
+                            <button id="C" onclick="letterCreate('C')">C</button>
+                            <button id="V" onclick="letterCreate('V')">V</button>
+                            <button id="B" onclick="letterCreate('B')">B</button>
+                            <button id="N" onclick="letterCreate('N')">N</button>
+                            <button id="M" onclick="letterCreate('M')">M</button>
                     </div>
-                    <div class=”row row4″>
-                       <!-- <div class=”backspace” id=”backspace”>Backspace</div>-->
+                    <div class="row row4">
+                       <!-- <div class="backspace" id="backspace">Backspace</div>-->
                     </div>
                     
                 </div>
