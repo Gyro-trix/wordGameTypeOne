@@ -7,6 +7,8 @@ let time;
 let sym;
 let level = 1;
 let wordLength = 0;
+let btn;
+
 
 function timer(){
     if (mode == 0){
@@ -48,6 +50,7 @@ function playPause(){
     if (mode == 1){
         const button = document.getElementById("play").innerHTML = "Play";
     }
+    
 }
 
 function infoPopUp(){
@@ -61,16 +64,18 @@ function infoPopUp(){
 }
 
 function letterCreate(sym){
-if (wordLength < 2 ){
-    document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
-    wordLength++;
-} else if(wordLength == 2){
-    document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
-    document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
-    document.getElementById("currentWord").innerHTML = "";
-    wordLength = 0;
-}
     
+    if (wordLength < 2 && mode === 1){
+        document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
+        wordLength++;
+        
+    } else if(wordLength === 2 && mode === 1){
+        document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
+        document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
+        document.getElementById("currentWord").innerHTML = "";
+        wordLength = 0;
+    }
+}
     /*
     let div = document.createElement("div");
     div.id = "letter";
@@ -83,4 +88,3 @@ if (wordLength < 2 ){
     
 document.getElementById("words").appendChild(div);
 */
-}

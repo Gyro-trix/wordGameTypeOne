@@ -92,6 +92,18 @@ body{
     padding-left:10px;
 
 }
+button{
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    margin: 4px 4px;
+    border: none;
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /*
 #ip{
     background-color: rgb(26, 26, 26);
@@ -129,18 +141,7 @@ body{
 }
 
 */
-button{
-    width: 25px;
-    height: 25px;
-    font-weight: bold;
-    margin: 4px 4px;
-    border: none;
-    background-color: transparent;
-    color:rgb(255, 255, 255);
-    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 /*
 .row4, .backspace, .space{
