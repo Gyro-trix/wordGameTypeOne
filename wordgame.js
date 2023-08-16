@@ -84,6 +84,7 @@ function letterCreate(sym){
 
 function backspace(){
     let wString = document.getElementById("currentWord").innerHTML;
+    wordLength--;
     enableButton(String(wString.charAt(wString.length - 1)));
     document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
 }
