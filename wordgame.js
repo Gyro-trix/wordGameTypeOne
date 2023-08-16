@@ -69,7 +69,7 @@ function letterCreate(sym){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
         wordLength++;
         btn = document.getElementById(String(sym));
-        btn.setAttribute("disabled","");
+        btn.setAttribute("disabled",true);
         
     } else if(wordLength === 2 && mode === 1){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
@@ -77,9 +77,21 @@ function letterCreate(sym){
         document.getElementById("currentWord").innerHTML = "";
         wordLength = 0;
         btn = document.getElementById(String(sym));
-        btn.setAttribute("disabled","");
+        btn.setAttribute("disabled",true);
     }
   
+}
+
+function backspace(){
+    let wString = document.getElementById("currentWord").innerHTML;
+    enableButton(String(wString.charAt(wString.length - 1)));
+    document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
+}
+
+function enableButton(letter){
+    btn = document.getElementById(String(letter));
+    btn.removeAttribute("disabled","");
+
 }
     /*
     let div = document.createElement("div");
