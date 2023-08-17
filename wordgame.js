@@ -23,18 +23,14 @@ function initKeyboard(){
         
         switch(key){
             case "Backspace":
-                /*keyElement = document.getElementById("Backspace");*/
                 console.log();
                 keyElement.addEventListener("click", backspace);
             break;
-            case "Enter":
-                /*keyElement = document.getElementById(key);*/
+            case "Enter":             
                 console.log(key);
                 keyElement.addEventListener("click", nextWord);
             break;
             default:
-                /*keyElement = document.getElementById(key);*/
-                
                 console.log(keyElement);
                 keyElement.addEventListener("click", function() {letterCreate(String(key))});
             break;
