@@ -82,10 +82,12 @@ function letterCreate(sym){
 }
 
 function backspace(){
-    let wString = document.getElementById("currentWord").innerHTML;
-    enableButton(String(wString.charAt(wString.length - 1)));
-    document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
-    wordLength--;
+    if(mode === 1){
+        let wString = document.getElementById("currentWord").innerHTML;
+        enableButton(String(wString.charAt(wString.length - 1)));
+        document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
+        wordLength--;
+    }
 }
 
 function nextWord(){
