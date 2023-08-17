@@ -12,7 +12,7 @@ let btn;
 function initKeyboard(){
     
     const keys = [
-    "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+    'Q', 'W', 'E', "R", "T", "Y", "U", "I", "O", "P",
     "A", "S", "D", "F", "G", "H", "J", "K", "L", "Enter",
     "Z", "X", "C", "V", "B", "N", "M", "Backspace"
     ];
@@ -24,7 +24,7 @@ function initKeyboard(){
         switch(key){
             case "Backspace":
                 /*keyElement = document.getElementById("Backspace");*/
-                console.log(keyElement);
+                console.log();
                 keyElement.addEventListener("click", backspace);
             break;
             case "Enter":
@@ -34,8 +34,9 @@ function initKeyboard(){
             break;
             default:
                 /*keyElement = document.getElementById(key);*/
-                console.log(key);
-                keyElement.addEventListener("click", letterCreate(key));
+                
+                console.log(keyElement);
+                keyElement.addEventListener("click", function() {letterCreate(String(key))});
             break;
         }
     })
