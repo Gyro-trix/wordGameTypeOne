@@ -9,29 +9,32 @@ let level = 1;
 let wordLength = 0;
 let btn;
 
-const keys = [
+function initKeyboard(){
+    
+    const keys = [
     "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
     "A", "S", "D", "F", "G", "H", "J", "K", "L", "Enter",
     "Z", "X", "C", "V", "B", "N", "M", "Backspace"
-];
+    ];
 
-function initKeyboard(){
-    
     keys.forEach(key =>{
-        const keyElement = document.getElementById(key) ;
+        let keyElement = document.getElementById(String(key)) ;
 
         
         switch(key){
             case "Backspace":
-                /*keyElement = document.getElementById(key);*/
-                keyElement.addEventListener("click", backspace());
+                /*keyElement = document.getElementById("Backspace");*/
+                console.log(keyElement);
+                keyElement.addEventListener("click", backspace);
             break;
             case "Enter":
                 /*keyElement = document.getElementById(key);*/
-                keyElement.addEventListener("click", nextWord());
+                console.log(key);
+                keyElement.addEventListener("click", nextWord);
             break;
             default:
                 /*keyElement = document.getElementById(key);*/
+                console.log(key);
                 keyElement.addEventListener("click", letterCreate(key));
             break;
         }
