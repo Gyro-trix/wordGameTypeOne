@@ -10,6 +10,7 @@ let wordLength = 0;
 let btn;
 
 
+
 function timer(){
     if (mode == 0){
         time = setInterval(function(){
@@ -67,26 +68,33 @@ function letterCreate(sym){
     
     if (wordLength < 2 && mode === 1){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
-        wordLength++;
         btn = document.getElementById(String(sym));
         btn.setAttribute("disabled",true);
+        wordLength++;
         
     } else if(wordLength === 2 && mode === 1){
         document.getElementById("currentWord").innerHTML = document.getElementById("currentWord").innerHTML + sym;
-        document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
-        document.getElementById("currentWord").innerHTML = "";
-        wordLength = 0;
         btn = document.getElementById(String(sym));
         btn.setAttribute("disabled",true);
+        wordLength++;
     }
   
 }
 
 function backspace(){
     let wString = document.getElementById("currentWord").innerHTML;
-    wordLength--;
     enableButton(String(wString.charAt(wString.length - 1)));
     document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
+    wordLength--;
+}
+
+function nextWord(){
+    if(wordLength === 3 && mode === 1){
+        document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
+        document.getElementById("currentWord").innerHTML = "";
+        wordLength = 0;
+    }
+    
 }
 
 function enableButton(letter){

@@ -102,7 +102,7 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
-.backspace{
+.otherbtn{
     width: 75px;
 }
 button:disabled{
