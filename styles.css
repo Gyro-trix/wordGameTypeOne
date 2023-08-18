@@ -57,7 +57,7 @@ body{
     width: 600px;
     z-index: 5;
 }
-.info{
+.infoOver{
     position:fixed;
     background-color: rgba(23, 0, 128, 0.856); 
     margin:auto;

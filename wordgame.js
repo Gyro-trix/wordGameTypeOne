@@ -17,6 +17,16 @@ function initKeyboard(){
     "Z", "X", "C", "V", "B", "N", "M", "Backspace"
     ];
 
+    let inf = document.getElementById("info");
+    let restrt = document.getElementById("restrt");
+    let beg = document.getElementById("begin");
+
+
+    inf.addEventListener("click", infoPopUp);
+    restrt.addEventListener("click", restart);
+    beg.addEventListener("click", infoPopUp);
+    beg.addEventListener("click", timer);
+
     keys.forEach(key =>{
         let keyElement = document.getElementById(String(key)) ;
 
@@ -38,8 +48,6 @@ function initKeyboard(){
     })
 
 }
-
-
 
 function timer(){
     if (mode == 0){
@@ -86,10 +94,10 @@ function playPause(){
 
 function infoPopUp(){
     if(popup === true){
-        document.getElementById("info").style.visibility='hidden';
+        document.getElementById("infoOver").style.visibility='hidden';
         popup = false;
     } else if (popup === false){
-        document.getElementById("info").style.visibility='visible';
+        document.getElementById("infoOver").style.visibility='visible';
         popup = true;
     }
 }
