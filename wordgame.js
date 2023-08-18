@@ -8,6 +8,7 @@ let sym;
 let level = 1;
 let wordLength = 0;
 let btn;
+let src;
 
 function initKeyboard(){
     
@@ -20,12 +21,14 @@ function initKeyboard(){
     let inf = document.getElementById("info");
     let restrt = document.getElementById("restrt");
     let beg = document.getElementById("begin");
-
+    let ply = document.getElementById("playGame");
 
     inf.addEventListener("click", infoPopUp);
     restrt.addEventListener("click", restart);
     beg.addEventListener("click", infoPopUp);
     beg.addEventListener("click", timer);
+    /*ply.addEventListener("click", playPause);*/
+    ply.addEventListener("click", timer);
 
     keys.forEach(key =>{
         let keyElement = document.getElementById(String(key)) ;
@@ -69,10 +72,9 @@ function timer(){
 }
 }
 
-function scoreUp(){
+function scoreUp(src){
     if (mode == 1){
-    score = score + 10;
-    sec = sec + 10;
+    score = score + src;
     document.getElementById("score").innerHTML = "";
     document.getElementById("score").textContent = score;
     }
@@ -84,10 +86,10 @@ function restart(){
 
 function playPause(){
     if (mode == 0){
-        const button = document.getElementById("play").innerHTML = "Pause";
+        const button = document.getElementById("playGame").innerHTML = "Pause";
     } 
     if (mode == 1){
-        const button = document.getElementById("play").innerHTML = "Play";
+        const button = document.getElementById("playGame").innerHTML = "Play";
     }
     
 }
