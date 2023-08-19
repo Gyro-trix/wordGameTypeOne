@@ -10,11 +10,11 @@ let wordLength = 0;
 let btn;
 let src;
 const wList = [
-    "APE", "Ask", "Asp", "Bat", "Bok", "Cat", "Cow", "Cub", "Dam", "Doe", 
-    "Dog", "Dso", "Dzo", "Elk", "Fox", "Gib", "Gnu", "Hog", 
-    "Kid", "Kit", "Kob", "Mog", "Pig", "Pup", "Ram", "Rat", "Rig",
-    "Roe", "Sai", "Sei", "Sow", "Teg", "Tod", "Tup", "Ure", "Wat",
-    "Yak", "Zho"
+    "APE", "ASK", "ASP", "BAT", "BOK", "CAT", "COW", "CUB", "DAM", "DOE", 
+    "DOG", "DSO", "DZO", "ELK", "FOX", "GIB", "GNU", "HOG", 
+    "KID", "KIT", "KOB", "MOG", "PIG", "PUP", "RAM", "RAT", "RIG",
+    "ROE", "SAI", "SEI", "SOW", "TEG", "TOD", "TUP", "URE", "WAT",
+    "YAK", "ZHO"
     ];
 
 /* Creates event listeners for all buttons*/    
