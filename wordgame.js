@@ -62,9 +62,13 @@ function initKeyboard(){
 
 function wCheck(){
     wList.forEach(wrd =>{
-        const ans = getElementByID("currentWord").innerHTML;
+        const ans = document.getElementById("currentWord").innerHTML;
+        console.log(ans);
         const result = ans.localeCompare(wrd);
-        scoreUp();
+        if(result === 0){
+           scoreUp(10); 
+        }
+        
     })
 }
 
@@ -148,6 +152,7 @@ function backspace(){
 }
 
 function nextWord(){
+    
     if(wordLength === 3 && mode === 1){
         wCheck();
         document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
