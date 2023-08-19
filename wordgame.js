@@ -9,7 +9,15 @@ let level = 1;
 let wordLength = 0;
 let btn;
 let src;
+const wList = [
+    "APE", "Ask", "Asp", "Bat", "Bok", "Cat", "Cow", "Cub", "Dam", "Doe", 
+    "Dog", "Dso", "Dzo", "Elk", "Fox", "Gib", "Gnu", "Hog", 
+    "Kid", "Kit", "Kob", "Mog", "Pig", "Pup", "Ram", "Rat", "Rig",
+    "Roe", "Sai", "Sei", "Sow", "Teg", "Tod", "Tup", "Ure", "Wat",
+    "Yak", "Zho"
+    ];
 
+/* Creates event listeners for all buttons*/    
 function initKeyboard(){
     
     const keys = [
@@ -52,6 +60,15 @@ function initKeyboard(){
 
 }
 
+function wCheck(){
+    wList.forEach(wrd =>{
+        const ans = getElementByID("currentWord").innerHTML;
+        const result = ans.localeCompare(wrd);
+        scoreUp();
+    })
+}
+
+/* Creates, starts, and stops the timer*/ 
 function timer(){
     if (mode == 0){
         time = setInterval(function(){
@@ -71,7 +88,7 @@ function timer(){
     
 }
 }
-
+/* Adds to the score*/
 function scoreUp(src){
     if (mode == 1){
     score = score + src;
@@ -132,6 +149,7 @@ function backspace(){
 
 function nextWord(){
     if(wordLength === 3 && mode === 1){
+        wCheck();
         document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
         document.getElementById("currentWord").innerHTML = "";
         wordLength = 0;
