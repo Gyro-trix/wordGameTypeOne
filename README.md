@@ -1,11 +1,12 @@
-# wordGameTypeOne (Working Title)
+# Word Race: 3 Letter Animal
 
 ## This projects goal is to create the described word game using HTML, CSS, and Java Script
 
-The main objective of this games to to create as many animal words as possible using each letter on the keyboard exactly once for different word lengths. 
-Levels are determined by word length starting at three letter words then going to four letter words for a second level in this project.
-A minimum amount of completed words is required before proceeding to the next level, the player may choose to stay and earn more points or go to the next level. 
-Each level also has a timer that can cause the game to end early.
+The main objective of this game is to have the player type out three letter words and compare it to a themed list. In this case animals.
+Score is acquired in three ways. 
+First by the word itself weighted based on how common it is (subjective). 
+Second by completing quickly and gaining a score bonus depending how much time is left.
+Third is having score taken away when an incorrect word is used or when the backspace is used.
 
 ## Control Layout
 
@@ -33,4 +34,12 @@ Create and manipulate a score variable.
 
 Create a usable user interface.
 
-Implement a spell checker to verify words. 
+Compare player input to a predetermine list.
+
+## Make it Better
+
+Improve UI design
+
+External file use for word list
+
+Add sounds
