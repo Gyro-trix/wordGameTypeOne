@@ -10,7 +10,7 @@ let wordLength = 0;
 let btn;
 let src;
 let comp;
-
+/* List of valid words to check*/
 const wList = [
     "APE", "ASK", "ASP", "BAT", "BOK", "CAT", "COW", "CUB", "DAM", "DOE", 
     "DOG", "DSO", "DZO", "ELK", "FOX", "GIB", "GNU", "HOG", 
@@ -37,7 +37,6 @@ function initKeyboard(){
     restrt.addEventListener("click", restart);
     beg.addEventListener("click", infoPopUp);
     beg.addEventListener("click", timer);
-    /*ply.addEventListener("click", playPause);*/
     ply.addEventListener("click", timer);
 
     keys.forEach(key =>{
@@ -61,7 +60,7 @@ function initKeyboard(){
     })
 
 }
-
+/* Compares word with word list and increments score*/
 function wCheck(){
     comp = false;
     wList.forEach(wrd =>{
@@ -79,7 +78,6 @@ function wCheck(){
         backspace();
     }
 }
-
 /* Creates, starts, and stops the timer*/ 
 function timer(){
     if (mode == 0){
@@ -112,7 +110,7 @@ function scoreUp(src){
 function restart(){
     location.reload();
 }
-
+/* Manages mode to represent a play/pause of the game*/
 function playPause(){
     if (mode == 0){
         const button = document.getElementById("playGame").innerHTML = "Pause";
@@ -122,7 +120,7 @@ function playPause(){
     }
     
 }
-
+/* Enables/disables div popup for tutorial*/
 function infoPopUp(){
     if(popup === true){
         document.getElementById("infoOver").style.visibility='hidden';
@@ -132,7 +130,7 @@ function infoPopUp(){
         popup = true;
     }
 }
-
+/* Adds a letter up to three letters */
 function letterCreate(sym){
     
     if (wordLength < 2 && mode === 1){
@@ -149,7 +147,7 @@ function letterCreate(sym){
     }
   
 }
-
+/* removes a character and re-enables button on keyboard*/
 function backspace(){
     if(mode === 1){
         let wString = document.getElementById("currentWord").innerHTML;
@@ -159,7 +157,7 @@ function backspace(){
         scoreUp(-1);
     }
 }
-
+/* Enter button that calls word checking*/
 function nextWord(){
     
     if(wordLength === 3 && mode === 1){
@@ -172,7 +170,7 @@ function nextWord(){
     }
     
 }
-
+/* enables a button button using ID of letter*/
 function enableButton(letter){
     btn = document.getElementById(String(letter));
     btn.removeAttribute("disabled","");
