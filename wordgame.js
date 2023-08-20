@@ -9,6 +9,8 @@ let level = 1;
 let wordLength = 0;
 let btn;
 let src;
+let comp;
+
 const wList = [
     "APE", "ASK", "ASP", "BAT", "BOK", "CAT", "COW", "CUB", "DAM", "DOE", 
     "DOG", "DSO", "DZO", "ELK", "FOX", "GIB", "GNU", "HOG", 
@@ -61,15 +63,21 @@ function initKeyboard(){
 }
 
 function wCheck(){
+    comp = false;
     wList.forEach(wrd =>{
         const ans = document.getElementById("currentWord").innerHTML;
         console.log(ans);
         const result = ans.localeCompare(wrd);
         if(result === 0){
-           scoreUp(10); 
+            comp = true;
+            scoreUp(10); 
         }
-        
     })
+    if (comp === false){
+        backspace();
+        backspace();
+        backspace();
+    }
 }
 
 /* Creates, starts, and stops the timer*/ 
@@ -100,7 +108,7 @@ function scoreUp(src){
     document.getElementById("score").textContent = score;
     }
 }
-
+/* Refresh page to restart*/
 function restart(){
     location.reload();
 }
@@ -148,6 +156,7 @@ function backspace(){
         enableButton(String(wString.charAt(wString.length - 1)));
         document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
         wordLength--;
+        scoreUp(-1);
     }
 }
 
@@ -155,9 +164,11 @@ function nextWord(){
     
     if(wordLength === 3 && mode === 1){
         wCheck();
+        if(comp === true){
         document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
         document.getElementById("currentWord").innerHTML = "";
         wordLength = 0;
+        }
     }
     
 }
