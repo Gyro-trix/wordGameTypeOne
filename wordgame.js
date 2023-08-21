@@ -18,6 +18,9 @@ const wList = [
     "ROE", "SAI", "SEI", "SOW", "TEG", "TOD", "TUP", "URE", "WAT",
     "YAK", "ZHO"
     ];
+const cmnWList = [];
+const uncmnWList = [];
+const rareWList = [];
 
 /* Creates event listeners for all buttons*/    
 function initKeyboard(){
