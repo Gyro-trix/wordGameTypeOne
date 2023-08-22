@@ -12,14 +12,16 @@ let src;
 let comp;
 /* List of valid words to check*/
 const wList = [
-    "DOG","CAT","COW","PIG",
-    "FOX","BAT",
-    "YAK"
+    "DOG","CAT","COW","PIG","FLY",
+    "FOX","BAT","RAM","RAY","RAT","COD","ELK","ANT","OWL","JAY",
+    "YAK","GAR","EFT","EMU","GNU","OLM","ASP","IDE",
+    "MOA"
     ];
 const wWorth = [
-    5,5,5,5,
-    10,10,
-    15
+    5,5,5,5,5,
+    10,10,10,10,10,10,10,10,10,10,
+    15,15,15,15,15,15,15,15,
+    20
 ];
 
 /* Creates event listeners for all buttons*/    
