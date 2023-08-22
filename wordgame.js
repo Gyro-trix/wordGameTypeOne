@@ -64,6 +64,22 @@ function initKeyboard(){
 
 }
 /* Compares word with word list and increments score*/
+function cmnCheck(){
+    cmnWList.forEach(
+
+    )
+}
+function uncmnCheck(){
+    uncmnWList.forEach(
+
+    )
+}
+function rareCheck(){
+    rareWList.forEach(
+
+    )
+}
+
 function wCheck(){
     comp = false;
     wList.forEach(wrd =>{
@@ -80,6 +96,7 @@ function wCheck(){
         backspace();
         backspace();
     }
+
 }
 /* Creates, starts, and stops the timer*/ 
 function timer(){
