@@ -65,17 +65,23 @@ function initKeyboard(){
 }
 /* Compares word with word list and increments score*/
 function cmnCheck(){
-    cmnWList.forEach(
+    cmnWList.forEach(cmnwrd=>{
+
+    }
 
     )
 }
 function uncmnCheck(){
-    uncmnWList.forEach(
+    uncmnWList.forEach(uncmnwrd=>{
+
+    }
 
     )
 }
 function rareCheck(){
-    rareWList.forEach(
+    rareWList.forEach(rarewrd=>{
+        
+    }
 
     )
 }
