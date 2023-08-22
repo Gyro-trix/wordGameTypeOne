@@ -12,10 +12,14 @@ let src;
 let comp;
 /* List of valid words to check*/
 const wList = [
-    "DOG","CAT","COW","PIG"
+    "DOG","CAT","COW","PIG",
+    "FOX","BAT",
+    "YAK"
     ];
 const wWorth = [
-    5,5,5,5
+    5,5,5,5,
+    10,10,
+    15
 ];
 
 /* Creates event listeners for all buttons*/    
@@ -62,13 +66,13 @@ function initKeyboard(){
 /* Compares word with word list and increments score*/
 function wCheck(){
     comp = false;
-    wList.forEach(wrd =>{
+    wList.forEach((wrd, index) =>{
         const ans = document.getElementById("currentWord").innerHTML;
         console.log(ans);
         const result = ans.localeCompare(wrd);
         if(result === 0){
             comp = true;
-            scoreUp(10); 
+            scoreUp(wWorth[index]); 
         }
     })
     if (comp === false){
