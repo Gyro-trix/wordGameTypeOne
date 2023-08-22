@@ -12,15 +12,11 @@ let src;
 let comp;
 /* List of valid words to check*/
 const wList = [
-    "APE", "ASK", "ASP", "BAT", "BOK", "CAT", "COW", "CUB", "DAM", "DOE", 
-    "DOG", "DSO", "DZO", "ELK", "FOX", "GIB", "GNU", "HOG", 
-    "KID", "KIT", "KOB", "MOG", "PIG", "PUP", "RAM", "RAT", "RIG",
-    "ROE", "SAI", "SEI", "SOW", "TEG", "TOD", "TUP", "URE", "WAT",
-    "YAK", "ZHO"
+    "DOG","CAT","COW","PIG"
     ];
-const cmnWList = [];
-const uncmnWList = [];
-const rareWList = [];
+const wWorth = [
+    5,5,5,5
+];
 
 /* Creates event listeners for all buttons*/    
 function initKeyboard(){
@@ -64,28 +60,6 @@ function initKeyboard(){
 
 }
 /* Compares word with word list and increments score*/
-function cmnCheck(){
-    cmnWList.forEach(cmnwrd=>{
-
-    }
-
-    )
-}
-function uncmnCheck(){
-    uncmnWList.forEach(uncmnwrd=>{
-
-    }
-
-    )
-}
-function rareCheck(){
-    rareWList.forEach(rarewrd=>{
-        
-    }
-
-    )
-}
-
 function wCheck(){
     comp = false;
     wList.forEach(wrd =>{
