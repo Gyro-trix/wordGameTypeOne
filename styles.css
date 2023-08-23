@@ -42,6 +42,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+.reload{
+        background-color: rgb(209, 100, 100);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        float: left;
+        justify-content: center;
+        align-items: center;
+}
 .time {
     background-color: rgb(10, 141, 10); 
     display: flex;
@@ -49,6 +58,12 @@ body{
     width: 100px;
 }
 .score{
+    background-color: rgb(128, 0, 0); 
+    display: flex;
+    height: 50px;
+    width: 100px;
+}
+.fscore{
     background-color: rgb(128, 0, 0); 
     display: flex;
     height: 50px;
@@ -83,7 +98,7 @@ body{
     z-index: 10;
 }
 .finish{
-    position:fixed;
+    position:fixed;  
     background-color: rgba(23, 0, 128, 0.856); 
     margin:auto;
     height: 400px;

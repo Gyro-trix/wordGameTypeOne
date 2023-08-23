@@ -189,6 +189,10 @@ function enableButton(letter){
 
 }
 function finGame(){
+    timer();
+    document.getElementById("fScore").innerHTML = "";
+    score = score + sec;
+    document.getElementById("fScore").textContent = score;
     document.getElementById("finish").style.visibility='visible';
 }  
 window.addEventListener("DOMContentLoaded", initKeyboard());
