@@ -82,6 +82,17 @@ body{
     margin-left: -300px;
     z-index: 10;
 }
+.finish{
+    position:fixed;
+    background-color: rgba(23, 0, 128, 0.856); 
+    margin:auto;
+    height: 400px;
+    width: 800px;
+    left: 50%;
+    margin-top: 100px;
+    margin-left: -400px;
+    z-index: 15;
+}
 .begin{
     background-color: rgb(0, 207, 10);
     width: 50px;
@@ -103,6 +114,7 @@ body{
 .currentWord, .prevWord{
     font-size: 40px;
     padding-left:10px;
+    min-height: 40px;
 
 }
 button{
@@ -132,76 +144,6 @@ button:disabled{
     border-radius: 5px;
     cursor: pointer;
 }
-
-/*
-#ip{
-    background-color: rgb(26, 26, 26);
-    width: 500px;
-    min-height: 30px;
-    box-shadow: -3px -3px 5px rgb(63, 63, 63) , 3px 3px 5px black;
-    text-align: center;
-    color: white;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 165px;
-    left: 50%;
-    margin: -50px auto;
-    transform:translateX(-50%) ;
-    font-size: 18px;
-    text-transform: capitalize;
-}
-
-.keybd{
-    box-shadow: -3px -3px 5px rgb(63, 63, 63) , 3px 3px 5px black;
-    width: 500px;
-    margin:200px auto 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:20px 20px;
-    border-radius: 10px;
-}
-.row{
-    margin:10px ;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-*/
-
-
-/*
-.row4, .backspace, .space{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.keybd .backspace, .space{
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none; 
-}
-.backspace, .space{
-    border-radius: 5px;
-    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
-}
-.keybd .space{
-    width: 300px;
-    height: 50px;
-}
-.keybd .backspace {
-    width: 100px;
-    height: 50px;
-    margin-left: 15px;
-}
-.keybd .active{
-    box-shadow:inset -2px -2px 4px rgb(63, 63, 63) ,inset 2px 2px 4px black;
-    color: yellow;
-}
-*/
 
 .spacer{
     height: 300px;

@@ -13,13 +13,13 @@ let comp;
 /* List of valid words to check*/
 const wList = [
     "DOG","CAT","COW","PIG","FLY",
-    "FOX","BAT","RAM","RAY","RAT","COD","ELK","ANT","OWL","JAY",
+    "FOX","BAT","RAM","RAY","RAT","COD","ELK","ANT","OWL","JAY","HEN",
     "YAK","GAR","EFT","EMU","GNU","OLM","ASP","IDE",
     "MOA"
     ];
 const wWorth = [
     5,5,5,5,5,
-    10,10,10,10,10,10,10,10,10,10,
+    10,10,10,10,10,10,10,10,10,10,10,
     15,15,15,15,15,15,15,15,
     20
 ];
@@ -33,16 +33,22 @@ function initKeyboard(){
     "Z", "X", "C", "V", "B", "N", "M", "Backspace"
     ];
 
+    document.getElementById("finish").style.visibility='hidden';
+
     let inf = document.getElementById("info");
     let restrt = document.getElementById("restrt");
     let beg = document.getElementById("begin");
     let ply = document.getElementById("playGame");
+    let res = document.getElementById("reload");
+    let fin = document.getElementById("nLevel");
 
     inf.addEventListener("click", infoPopUp);
     restrt.addEventListener("click", restart);
     beg.addEventListener("click", infoPopUp);
     beg.addEventListener("click", timer);
     ply.addEventListener("click", timer);
+    res.addEventListener("click", restart);
+    fin.addEventListener("click", finGame);
 
     keys.forEach(key =>{
         let keyElement = document.getElementById(String(key)) ;
@@ -182,5 +188,7 @@ function enableButton(letter){
     btn.removeAttribute("disabled","");
 
 }
-   
+function finGame(){
+    document.getElementById("finish").style.visibility='visible';
+}  
 window.addEventListener("DOMContentLoaded", initKeyboard());
