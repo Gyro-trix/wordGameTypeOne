@@ -127,6 +127,7 @@ body{
     width: 600px;
 } 
 .currentWord, .prevWord{
+    font-family: 'Courier New', Courier, monospace;
     margin:0 auto;
     display:block;
     font-size: 40px;
