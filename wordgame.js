@@ -25,7 +25,7 @@ const wWorth = [
 ];
 
 /* Creates event listeners for all buttons*/    
-function initKeyboard(){
+function init(){
     
     const keys = [
     'Q', 'W', 'E', "R", "T", "Y", "U", "I", "O", "P",
@@ -195,4 +195,4 @@ function finGame(){
     document.getElementById("fScore").textContent = "Score: " + score;
     document.getElementById("finish").style.visibility='visible';
 }  
-window.addEventListener("DOMContentLoaded", initKeyboard());
+window.addEventListener("DOMContentLoaded", init());
