@@ -191,8 +191,10 @@ function enableButton(letter){
 function finGame(){
     timer();
     document.getElementById("fScore").innerHTML = "";
+    document.getElementById("fScore").textContent = "Word Score: " + score + " \r\n";
+    document.getElementById("fScore").textContent += "Time Bonus: " + sec + " \r\n";
     score = score + sec;
-    document.getElementById("fScore").textContent = "Score: " + score;
+    document.getElementById("fScore").textContent += "Total Score: " + score + " ";
     document.getElementById("finish").style.visibility='visible';
 }  
 window.addEventListener("DOMContentLoaded", init());
