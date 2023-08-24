@@ -20,10 +20,10 @@ const wList = [
     "MOA"
     ];
 const wWorth = [
-    5,5,5,5,5,
-    10,10,10,10,10,10,10,10,10,10,10,
-    15,15,15,15,15,15,15,15,
-    20
+    10,10,10,10,10,
+    20,20,20,20,20,20,20,20,20,20,20,
+    30,30,30,30,30,30,30,30,
+    50
 ];
 
 /* Creates event listeners for all buttons*/    
@@ -117,10 +117,21 @@ function timer(){
 /* Adds to the score*/
 function scoreUp(src){
     if (mode == 1){
-    score = score + src;
-    document.getElementById("score").innerHTML = "";
-    document.getElementById("score").textContent = score;
+        scorePop(src);
+        score = score + src;
+        document.getElementById("score").innerHTML = "";
+        document.getElementById("score").textContent = score;
     }
+}
+function scorePop(num){
+    let sp = document.createElement('div');
+    let tar = document.getElementById("scorePopBase");
+    sp.textContent = num;
+    sp.setAttribute("class", "scrPop");
+    tar.appendChild(sp);
+    setTimeout(() => {
+    sp.style.display = 'none';
+    }, 1000);
 }
 /* Refresh page to restart*/
 function restart(){
@@ -196,6 +207,8 @@ function enableButton(letter){
     btn.removeAttribute("disabled","");
 
 }
+
+/* Displays finish div showing calculated score*/
 function finGame(){
     timer();
     document.getElementById("fScore").innerHTML = "";
