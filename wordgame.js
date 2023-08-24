@@ -7,9 +7,11 @@ let time;
 let sym;
 let level = 1;
 let wordLength = 0;
+let wordCount = 0;
 let btn;
 let src;
 let comp;
+let finbtn = document.getElementById("nLevel");
 /* List of valid words to check*/
 const wList = [
     "DOG","CAT","COW","PIG","FLY",
@@ -34,6 +36,8 @@ function init(){
     ];
 
     document.getElementById("finish").style.visibility='hidden';
+    
+    finbtn.setAttribute("disabled",true);
 
     let inf = document.getElementById("info");
     let restrt = document.getElementById("restrt");
@@ -175,9 +179,13 @@ function nextWord(){
     if(wordLength === 3 && mode === 1){
         wCheck();
         if(comp === true){
-        document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
-        document.getElementById("currentWord").innerHTML = "";
-        wordLength = 0;
+            document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
+            document.getElementById("currentWord").innerHTML = "";
+            wordLength = 0;
+            wordCount++;
+        }
+        if(wordCount === 2){
+            finbtn.removeAttribute("disabled","");
         }
     }
     

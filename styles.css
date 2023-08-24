@@ -174,7 +174,7 @@ button{
     width: 35px;
     height: 35px;
 }
-button:disabled{
+.kybtn:disabled{
     width: 35px;
     height: 35px;
     font-weight: bold;
@@ -185,6 +185,13 @@ button:disabled{
     border-radius: 5px;
     cursor: pointer;
     border-radius: 70%;
+}
+button:disabled{
+    background-color:rgba(44, 44, 44, 0.664);
+    color:rgba(44, 44, 44, 0.664);
+    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .spacer{
     height: 300px;
