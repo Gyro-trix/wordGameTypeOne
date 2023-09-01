@@ -1,6 +1,6 @@
 
 let score = 0;
-let sec = 60;
+let sec = 61;
 let mode = 0;
 let popup = true;
 let time;
@@ -73,7 +73,6 @@ function init(){
             break;
         }
     })
-
 }
 /* Compares word with word list and increments score*/
 function wCheck(){
@@ -98,14 +97,16 @@ function wCheck(){
 function timer(){
     if (mode == 0){
         time = setInterval(function(){
-        document.getElementById('timer').innerHTML='00:'+sec;
+        document.getElementById('timer').innerHTML=sec-1;
         sec--;
-        if (sec < 0) {
+        if (sec <= 0) {
             clearInterval(time);
+            finGame();
+            console.log(sec);
         }
     }, 1000);
     playPause();
-    mode = 1;
+    mode = 1;0
     
 } else{
     playPause();
