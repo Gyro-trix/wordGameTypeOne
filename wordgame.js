@@ -62,6 +62,7 @@ function init(){
             case "Backspace":
                 console.log();
                 keyElement.addEventListener("click", backspace);
+                keyElement.addEventListener("click", function(){scoreUp(-1)});
             break;
             case "Enter":             
                 console.log(key);
@@ -90,6 +91,7 @@ function wCheck(){
         backspace();
         backspace();
         backspace();
+        scoreUp(-3);
     }
 
 }
@@ -127,6 +129,11 @@ function scoreUp(src){
 function scorePop(num){
     let sp = document.createElement('div');
     let tar = document.getElementById("scorePopBase");
+    if(num >= 0){
+        sp.style.color = "green";
+    } else if(num < 0){
+        sp.style.color = "red";
+    }
     sp.textContent = num;
     sp.setAttribute("class", "scrPop");
     tar.appendChild(sp);
@@ -182,7 +189,6 @@ function backspace(){
         enableButton(String(wString.charAt(wString.length - 1)));
         document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
         wordLength--;
-        scoreUp(-1);
     }
 }
 /* Enter button that calls word checking*/
@@ -213,7 +219,12 @@ function enableButton(letter){
 function finGame(){
     timer();
     document.getElementById("fScore").innerHTML = "";
-    document.getElementById("fScore").textContent = "Word Score: " + score + " \r\n";
+    if(sec === 0){
+        document.getElementById("fScore").textContent += "Out of time, final score is:  \r\n \r\n";
+    } else{
+        document.getElementById("fScore").textContent += "TIME BONUS, final score is:  \r\n \r\n";
+    }
+    document.getElementById("fScore").textContent += "Word Score: " + score + " \r\n";
     document.getElementById("fScore").textContent += "Time Bonus: " + sec + " \r\n";
     score = score + sec;
     document.getElementById("fScore").textContent += "Total Score: " + score + " ";
