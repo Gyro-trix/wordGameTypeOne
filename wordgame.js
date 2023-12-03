@@ -62,7 +62,6 @@ function init(){
                     nextWord();
                 } else if (e.key === "Backspace"){
                     backspace();
-                    scoreUp(-1);
                 } else {
                     let temp = e.key;
                     if(!ltrdisable.includes(temp.toUpperCase())){
@@ -82,7 +81,6 @@ function init(){
         switch(key){
             case "Backspace":
                 keyElement.addEventListener("click", backspace);
-                keyElement.addEventListener("click", function(){scoreUp(-1)});
             break;
             case "Enter":             
                 keyElement.addEventListener("click", nextWord);
@@ -204,10 +202,13 @@ function letterCreate(sym){
 function backspace(){
     if(mode === 1){
         let wString = document.getElementById("currentWord").innerHTML;
-        enableButton(String(wString.charAt(wString.length - 1)));
-        removeOneItem(ltrdisable,String(wString.charAt(wString.length - 1)));
-        document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
-        wordLength--;
+        if (wordLength != 0){
+            enableButton(String(wString.charAt(wString.length - 1)));
+            removeOneItem(ltrdisable,String(wString.charAt(wString.length - 1)));
+            document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
+            wordLength--;
+            scoreUp(-1);
+        }
     }
 }
 /* Enter button that calls word checking*/
