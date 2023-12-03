@@ -12,6 +12,7 @@ let btn;
 let src;
 let comp;
 let finbtn = document.getElementById("nLevel");
+let ltrdisable = [];
 /* List of valid words to check*/
 const wList = [
     "DOG","CAT","COW","PIG","FLY",
@@ -64,7 +65,12 @@ function init(){
                     scoreUp(-1);
                 } else {
                     let temp = e.key;
-                    letterCreate(temp.toUpperCase());
+                    if(!ltrdisable.includes(temp.toUpperCase())){
+                        letterCreate(temp.toUpperCase());
+                        ltrdisable.push(temp.toUpperCase());
+                        console.log(ltrdisable);
+                    } 
+                    
                 } 
             }
         })
@@ -87,6 +93,7 @@ function init(){
         }
     })
 }
+
 /* Compares word with word list and increments score*/
 function wCheck(){
     comp = false;
