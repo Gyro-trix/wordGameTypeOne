@@ -216,10 +216,15 @@ function nextWord(){
     if(wordLength === 3 && mode === 1){
         wCheck();
         if(comp === true){
+            let temp = document.getElementById("words");
+            wordCount++;
+            let cal = (wordCount+1)*60;
             document.getElementById("prevWord").innerHTML = document.getElementById("prevWord").innerHTML +"<br>" + document.getElementById("currentWord").innerHTML;
             document.getElementById("currentWord").innerHTML = "";
             wordLength = 0;
-            wordCount++;
+            
+            temp.style.height= cal+'px';
+            temp.style.marginTop= (420-cal)+'px';
         }
         if(wordCount === 2){
             finbtn.removeAttribute("disabled","");
