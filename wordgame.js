@@ -107,7 +107,6 @@ function wCheck(){
         backspace();
         backspace();
         backspace();
-        scoreUp(-3);
     }
 
 }
