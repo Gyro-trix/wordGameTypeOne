@@ -113,6 +113,7 @@ body{
     margin:0 auto;
     display:block;
     min-height: 20px;
+    max-height: 20px;
 }
 .container{
     background-color: rgba(23, 0, 128, 0.349); 
