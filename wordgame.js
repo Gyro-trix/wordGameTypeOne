@@ -205,6 +205,7 @@ function backspace(){
     if(mode === 1){
         let wString = document.getElementById("currentWord").innerHTML;
         enableButton(String(wString.charAt(wString.length - 1)));
+        removeOneItem(ltrdisable,String(wString.charAt(wString.length - 1)));
         document.getElementById("currentWord").innerHTML = wString.slice(0,-1);
         wordLength--;
     }
@@ -232,6 +233,14 @@ function enableButton(letter){
     btn.removeAttribute("disabled","");
 
 }
+
+function removeOneItem(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    return arr;
+  }
 
 /* Displays finish div showing calculated score*/
 function finGame(){
