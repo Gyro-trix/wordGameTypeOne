@@ -30,7 +30,7 @@ const wWorth = [
 function init(){
     
     const keys = [
-    'Q', 'W', 'E', "R", "T", "Y", "U", "I", "O", "P",
+    "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
     "A", "S", "D", "F", "G", "H", "J", "K", "L", "Enter",
     "Z", "X", "C", "V", "B", "N", "M", "Backspace"
     ];
@@ -54,22 +54,34 @@ function init(){
     res.addEventListener("click", restart);
     fin.addEventListener("click", finGame);
 
+    document.addEventListener("keydown",(e)=> {
+        console.log(e.key);    
+        if(!e.repeat){
+                if (e.key === "Enter" ){
+                    nextWord();
+                } else if (e.key === "Backspace"){
+                    backspace();
+                    scoreUp(-1);
+                } else {
+                    let temp = e.key;
+                    letterCreate(temp.toUpperCase());
+                } 
+            }
+        })
+
     keys.forEach(key =>{
         let keyElement = document.getElementById(String(key)) ;
-
+        
         
         switch(key){
             case "Backspace":
-                console.log();
                 keyElement.addEventListener("click", backspace);
                 keyElement.addEventListener("click", function(){scoreUp(-1)});
             break;
             case "Enter":             
-                console.log(key);
                 keyElement.addEventListener("click", nextWord);
             break;
             default:
-                console.log(keyElement);
                 keyElement.addEventListener("click", function() {letterCreate(String(key))});
             break;
         }
@@ -80,7 +92,6 @@ function wCheck(){
     comp = false;
     wList.forEach((wrd, index) =>{
         const ans = document.getElementById("currentWord").innerHTML;
-        console.log(ans);
         const result = ans.localeCompare(wrd);
         if(result === 0){
             comp = true;
