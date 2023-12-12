@@ -107,6 +107,7 @@ function wCheck(){
         backspace();
         backspace();
         backspace();
+        pageMove("return");
     }
 
 }
@@ -245,7 +246,7 @@ function pageMove(desc){
     let calh = (wordLength);    
     if (desc === "vert"){
         temp.style.height= calv+'px';
-        temp.style.marginTop= (480-calv)+'px';
+        temp.style.marginTop= (500-calv)+'px';
     } else if (desc === "horiz"){
         temp.style.transform = `translate3d( ${-1*(calh*36.01)}px, 0, 0 )`;
     } else if (desc === "return"){

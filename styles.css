@@ -81,7 +81,7 @@ body{
 .words{
     background-color: rgb(255, 255, 255); 
     position:relative;
-    right: 41.97px;
+    right: 150px;
     float: right;
     margin-top: 440px;
     height: 60px;
@@ -153,9 +153,9 @@ body{
     align-items: center;
 }
 .keycon{
-    background-color: rgb(36, 36, 36); 
+    background-color: rgb(36, 36, 36);
     display: flex;
-    flex-direction: column;
+
     align-items: center;
     left: 50px;
     top: 150px;
@@ -168,10 +168,12 @@ body{
     font-weight: bold;
     margin:0 auto;
     display:block;
+    
     font-size: 60px;
     padding-left:10px;
-    
-
+}
+.currentWord{
+   min-height: 68px; 
 }
 button{
     width: 35px;
@@ -229,7 +231,8 @@ button:disabled{
     border-radius: 70%;
 }
 .spacer{
-    height: 300px;
+    height: 312px;
+    display:flex;
 }
 .scoreIncrease{
     background-color: rgb(128, 0, 0); 
