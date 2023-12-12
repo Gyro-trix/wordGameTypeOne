@@ -223,6 +223,7 @@ function nextWord(){
             document.getElementById("currentWord").innerHTML = "";
             wordLength = 0;
             pageMove("vert");
+            pageMove("return");
             
         }
         if(wordCount === 2){
@@ -240,13 +241,15 @@ function enableButton(letter){
 function pageMove(desc){
     let temp = document.getElementById("words")
     //Helps determine Page height
-    let calv = (wordCount)*60;
+    let calv = (wordCount+1)*68;
     let calh = (wordLength);    
     if (desc === "vert"){
-        temp.style.height= +'px';
-        temp.style.marginTop= (420-calv)+'px';
+        temp.style.height= calv+'px';
+        temp.style.marginTop= (480-calv)+'px';
     } else if (desc === "horiz"){
         temp.style.transform = `translate3d( ${-1*(calh*36.01)}px, 0, 0 )`;
+    } else if (desc === "return"){
+        temp.style.transform = `translate3d( 0, 0, 0 )`;
     }
 }
 function removeOneItem(arr, value) {
